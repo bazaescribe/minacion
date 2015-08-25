@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
 html, body {
     height:100%;
 }
@@ -7,45 +5,557 @@ html, body {
 body{
   padding: 0px;
   margin: 0px;
-  font-family: "Open Sans"
 }
 
-.background{
-  position: absolute;
+/************
+  COVER
+*************/
+
+.cover{
+  position: relative;
+  display: table;
   width: 100%;
   height: 100%;
-  display: block;
+  overflow: hidden;
+  top: 0px;
   z-index: 1;
 }
 
-.background img{
-  width: 100%;
-  height: 100%;
-}
-
-.container{
+/*
+.cover img{
   position: absolute;
   width: 100%;
   height: 100%;
-  display: block;
-  background: rgba(255, 255, 255, 0.95);
+  top: 0px;
   z-index: 5;
 }
+*/
 
-.gap{
-  height: 100px;
+.cover .tinted{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 6;
+}
+
+.cover .title{
+  display: table-cell;
+  vertical-align: center;
+  width: 100%;
+  z-index: 7;
+}
+
+.decor{
+  width: 100px !important;
+}
+
+.cover-section{
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  top: 0px;
+  z-index: 1;
+}
+
+.section-title{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.video-bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  height: 100%;
+  overflow: hidden;
+  min-width: 1000px;
+  z-index: -1;
+  background: black;
+}
+
+.video-bg video{
+    width: 100%;
+}
+
+/************
+  MENU
+*************/
+.header{
+  position: fixed;
+  background: rgba(35, 35, 35, 0.95);
+  /*background-image: url('./img/photos.bg');*/
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  top: 0px;
+  -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+}
+
+.blind{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 6;
+}
+
+.side-menu{
+  position: fixed;
+  left: -400px;
+  width: 350px;
+  height: 100%;
+  background: white;
+  box-shadow: 3px 0px 4px rgba(0, 0, 0, 0.4);
+  z-index: 7;
+}
+
+.side-menu ul{
+  margin-top: 100px;
+  list-style-type: none;
+  font-size: 18px;
+  color: #B9812B;
+}
+
+.side-menu li{
+  padding: 15px 0px 15px 10px;
+}
+
+.side-menu a:link{
+  color: #B9812B;
+  text-decoration: none;
+}
+
+.side-menu a:visited{
+  color: #B9812B;
+}
+
+.burger{
+  background: #B9812B;
+  color: white;
+  position: absolute;
+  left: 0px;
+  width: 100px;
+  height: 100%;
+  display: table;
+}
+
+.burger:hover{
+  opacity: 0.9;
+}
+
+.burger-button{
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .logo{
-  text-align: center;
+  display: table;
+  background: #b9812b;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 250px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px !important;
 }
 
-.logo img{
-  width: 35%;
+.logo-item{
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%
 }
 
-.moto{
-  color: #a2a2a2;
-  font-size: 35px;
+.logo-item img{
+  height: 48px;
+}
+
+.menu{
+  display: table;
+  position: absolute;
+  right: 40px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  font-weight: 300;
+}
+
+.menu ul{
+  padding: 0px;
+  margin-top: 0px;
+}
+
+.menu li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  font-size: 10px;
+}
+
+.menu a:link{
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu a:visited{
+  color: #fff;
+}
+
+.m-item{
+  display: table-cell;
+  color: #b9812b;
+  font-size: 14px;
+  vertical-align: middle;
+  padding: 0px 15px 0px 15px;
+}
+
+.m-item:hover{
+  background: #b9812b;
+  color: white;
+}
+
+/************
+  ROWS
+*************/
+
+.row{
+  width: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/************
+  CELLS
+*************/
+
+.cell{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/************
+  SPACES
+*************/
+
+.pad-10{
+  padding: 10px;
+}
+
+.pad-30{
+  padding: 30px;
+}
+
+.pad-50{
+  padding: 50px;
+}
+
+.mar-10{
+  margin: 10px;
+}
+
+.mar-30{
+  margin: 30px;
+}
+
+.mar-50{
+  margin: 50px;
+}
+
+/************
+  MOSAIQ
+*************/
+
+.mosaiq{
+  position: relative;
+  display: table;
+  width: 100%;
+  background: whitesmoke;
+}
+
+.tide{
+  display: table-cell;
   text-align: center;
+  vertical-align: middle;
+  width: 30%;
+  height: 220px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.tide-content{
+  font-size: 18px;
+}
+
+
+/************
+  ------------MOBILE------------
+*************/
+
+@media screen and (max-width: 910px) {
+    #menuBar {
+    }
+
+    #main-menu{
+      background-color: purple;
+      display: none;
+    }
+
+    .logo{
+      background: none;
+      position: absolute;
+      right: 0px;
+      left: auto;
+    }
+
+    .cover-section{
+      height: 90%;
+    }
+}
+
+
+/************
+  BUTTONS
+*************/
+
+.ghost-light{
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0px;
+  border: 1px solid white;
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.ghost-light:hover{
+  background: rgba(255, 255, 255, 0.9);
+  color: gray;
+}
+
+.ghost-light:focus{
+  background: white;
+  color: gray;
+}
+
+.ghost-light:active{
+  opacity: 0.85;
+}
+
+.ghost-dark{
+  background: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: black;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.ghost-dark:hover{
+  background: black;
+  color: white;
+}
+
+.ghost-dark:focus{
+  background: black;
+  color: white;
+}
+
+.ghost-dark:active{
+  opacity: 0.85;
+}
+
+.ghost-color{
+  background: none;
+  border-radius: 0px;
+  border: 1px solid #B9812B;
+  color: #B9812B;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.ghost-color:hover{
+  background: #B9812B;
+  color: white;
+}
+
+.ghost-color:focus{
+  background: #B9812B;
+  color: white;
+}
+
+.ghost-color:active{
+  opacity: 0.85;
+}
+
+.ghost-color-main{
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #3694E2;
+  color: #3694E2;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.ghost-color-main:hover{
+  background: #3694E2;
+  color: white;
+}
+
+.ghost-color-main:focus{
+  background: #3694E2;
+  color: white;
+}
+
+.ghost-color-main:active{
+  opacity: 0.85;
+}
+
+.solid-btn{
+  background: none;
+  border-radius: 5px;
+  border: 1px solid #7965EC;
+  color: #7965EC;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.solid-btn:hover{
+  background: #7965EC;
+  color: white;
+}
+
+.solid-btn:active{
+  opacity: 0.8;
+}
+
+/************
+  DIVS
+*************/
+
+.container{
+  padding: 0px 10% 0px 10%;
+}
+
+.hr{
+  border: 1px solid red;
+}
+
+/************
+  LOGOS
+*************/
+
+.allies{
+  max-height: 100px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(10%);
+  opacity: 0.3;
+}
+
+.allies img{
+  width: 100%;
+}
+
+.allies:hover{
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/************
+  POINTS
+*************/
+
+.point{
+  text-align: center;
+  margin: 5px;
+  width: 160px;
+  height: 160px;
+  background: none;
+}
+
+.point-icon{
+  color: #A3A3A3;
+  padding: 5px;
+}
+
+.point-icon:hover{
+  color: #B9812B;
+}
+
+.point-text{
+  font-size: 20px;
+  color: #A3A3A3;
+}
+
+/************
+  FORM
+*************/
+
+.txt-field{
+  width: 80%;
+  border: 1px solid #B4B4B4;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  font-size: 15px;
+}
+
+.txt-field:focus{
+  border-color: #D5A04F;
+}
+
+/************
+  EVENT
+*************/
+
+.event{
+  border: 1px solid #B4B4B4;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 10px 0px 0px;
+  width: 200px;
+  text-align: left;
+}
+
+.event .title{
+  color: #6E6E6E;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.event .date{
+  color: #a3a3a3;
+}
+
+.event .site{
+  color: #a3a3a3;
+}
+
+.event .price{
+  margin-top: 15px;
+  color: #B9812B;
+  font-size: 20px;
+}
+
+/************
+  FORM
+*************/
+
+.highlighter{
+  color: yellowgreen;
 }
